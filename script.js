@@ -1,17 +1,15 @@
 let image = document.querySelectorAll("img");
-console.log(image);
+
 let price = document.querySelectorAll(".price");
-console.log(price);
+
 let name = document.querySelectorAll(".name");
-console.log(name);
+
 let description = document.querySelectorAll(".description");
-console.log(description);
+
 let number = document.querySelector(".numbers");
-console.log(number);
+
 let message = document.querySelector(".message");
-console.log(message);
-let adding = document.querySelectorAll(".adding");
-console.log(adding);
+
 let add = document.querySelector(".add");
 let text = document.querySelector(".Text");
 let totalPrice = document.querySelector(".total-price-product");
@@ -19,10 +17,6 @@ let btnConfirm = document.querySelector(".btn-Confirm");
 const backdrop = document.querySelector(".backdrop");
 const modal = document.querySelector(".modal");
 const btnClose = document.querySelector(".btn-close");
-
-console.log(text);
-console.log(totalPrice);
-console.log(btnConfirm);
 
 let dataJson;
 async function getData() {
@@ -32,7 +26,7 @@ async function getData() {
     })
     .then((data) => {
       dataJson = data;
-      console.log(data || "not found");
+
       image.forEach((element, index) => {
         element.src = data[index].image.desktop;
       });
@@ -240,7 +234,7 @@ btnConfirm.addEventListener("click", () => {
     !modal.classList.contains("hidden")
   ) {
     let listProduct = document.querySelector(".list-products");
-    console.log(listProduct);
+
     Object.keys(cartItems).forEach((id) => {
       let item = cartItems[id];
       listProduct.innerHTML += `
