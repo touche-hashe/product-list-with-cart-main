@@ -1,0 +1,249 @@
+/* start global value */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* variables css */
+
+/* end variabes css */
+/* start components class */
+
+/* end components class */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Red Hat Text", sans-serif;
+}
+
+/* start meadia querie */
+@media (max-width: 575px) {
+  .container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    width: 540px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    width: 750px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    width: 970px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+section .intro {
+  font-size: 30px;
+  font-weight: bold;
+  color: #280d06;
+  margin-bottom: 10px;
+}
+section .container {
+  margin: 35px auto;
+}
+section .container .content {
+  display: flex;
+}
+section .container .content .dessert {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+}
+section .content .dessert .box {
+  position: relative;
+}
+section .content .dessert .box img:hover {
+  border: 2px solid #c83b0e;
+}
+section .content .dessert .box .adding {
+  position: absolute;
+  text-align: center;
+  padding: 10px 0;
+  width: 100px;
+  border-radius: 10px;
+  background-color: #c83b0e;
+  color: white;
+  bottom: 75px;
+  left: 50%;
+  transform: translateX(-65%);
+  border: 1px solid red;
+  cursor: pointer;
+}
+section .content .dessert .box .adding button {
+  padding: 0 10px;
+}
+section .content .dessert .box img {
+  margin-bottom: 10px;
+  margin-top: 5px;
+  width: 210px;
+  border-radius: 8px;
+}
+section .content .dessert .box .name {
+  color: #938882;
+}
+section .content .dessert .box .description {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+section .content .dessert .box .price {
+  color: #9f4e3d;
+}
+.large-col {
+  display: flex;
+  flex-direction: column;
+}
+section .content .cart {
+  background-color: #dadbd6;
+  width: 400px;
+  height: 350px;
+  position: relative;
+}
+section .content .cart .add {
+  overflow-y: auto;
+  height: 100%;
+}
+section .content .cart .numbers {
+  position: absolute;
+  top: -30px;
+  color: #b63c17;
+  font-weight: bold;
+  font-size: 20px;
+}
+section .content .message {
+  margin: 15px auto;
+}
+
+button.on {
+  margin: auto;
+  padding: 15px 100px;
+  border-radius: 17px;
+  background-color: #c83b0e;
+  border: none;
+  display: flex;
+  color: white;
+  font-weight: bold;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.message-two {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 50px 25px;
+}
+.message-two div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.message-two .total {
+  color: #291715;
+  font-weight: bold;
+  font-size: 25px;
+}
+.cart-content {
+  margin: 10px;
+  border-bottom: 1px solid black;
+}
+.cart-content p {
+  margin-bottom: 5px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 20;
+  width: 600px;
+  max-width: 90%;
+}
+.modal .modal-content h2 {
+  color: #2c160b;
+}
+.modal .modal-content .ending-message {
+  padding: 15px 0 30px;
+}
+
+.hidden {
+  display: none;
+}
+.list-products {
+  height: 300px;
+  overflow-y: auto;
+}
+.cart-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.cart-list .product-info {
+  display: flex;
+}
+.cart-list .product-info img {
+  width: 80px;
+  border-radius: 8px;
+}
+.cart-list .product-info p,
+span {
+  margin-left: 10px;
+}
+.cart-list .product-info p {
+  margin-bottom: 10px;
+}
+.btn-close {
+  margin: 0 auto;
+  padding: 13px 130px;
+  border-radius: 17px;
+  background-color: #c83b0e;
+  border: none;
+  display: flex;
+  color: white;
+  font-weight: bold;
+  justify-content: center;
+  cursor: pointer;
+}
+.box-bill {
+  display: flex;
+  justify-content: space-between;
+}
+.box-bill .bill,
+.total-price-product {
+  font-size: 25px;
+  color: #231411;
+  font-weight: bold;
+}
